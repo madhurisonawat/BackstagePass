@@ -1,0 +1,203 @@
+.feed-container {
+background-color: var(--bg);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 600px;
+}
+
+/* Card Styling */
+.post-card, .community-card {
+  background: var(--card);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  color: var(--text);
+}
+
+/* Post Interior */
+.post-content-wrapper { padding: 15px; }
+
+.user-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  padding-left: 10px;
+}
+.description{
+padding-left: 10px;
+}
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.user-name { font-weight: bold; display: block; font-size: 15px; color: var(--text); }
+.post-time { font-size: 12px; color: var(--muted); }
+
+.post-text { margin: 10px 0; font-size: 15px; line-height: 1.4; color: var(--text); }
+
+/* Video/Image Section */
+.video-placeholder {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Footer */
+.post-footer {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 6px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+/* Community Card Specifics */
+.community-card { padding: 20px; text-align: center; color: var(--text); }
+.community-card h3 { margin: 0; font-size: 18px; color: var(--text); }
+.participant-count { font-size: 14px; color: var(--muted); margin-bottom: 15px; }
+
+.pinned-post {
+  text-align: left;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  color: var(--text);
+}
+
+.pinned-label { font-size: 12px; color: var(--muted); margin-bottom: 10px;border-bottom:1px solid var(--border);  padding: 2px;}
+
+.task-list { list-style: none; padding-left: 10px; margin-top: 15px; }
+.task-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: var(--text);
+}
+
+.task-list span {
+  background: #4a90e2;
+  color: white;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+}
+
+.post-card {
+  width: 100%;
+  background: var(--card);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+/* Banner with a hint of pattern */
+.card-header-banner {
+  background-color: #eafaf1;
+  color: #2e7d32;
+  padding: 10px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.3px;
+}
+
+.avatar-placeholder {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #e0e0e0; /* Grey placeholder circle */
+  margin-right: 12px;
+}
+
+.more-options { margin-left: auto; color: var(--muted); cursor: pointer; }
+
+/* The White Placeholder Image Area */
+.video-placeholder-bg {
+  position: relative;
+  width: 100%;
+  height: 280px;
+  border-radius: 12px;
+  
+  /* Replace gradient with background image */
+  background-image: url('https://thumbs.dreamstime.com/z/man-actively-engaging-crunch-exercise-floor-working-his-abdominal-muscles-maintaining-proper-form-white-316460448.jpg?ct=jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
+  background-color: rgba(0, 0, 0, 0.1);
+
+  border: 1px solid var(--border);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Ensures the image doesn't bleed past border-radius */
+}
+
+/* Play Button Styling */
+.play-circle {
+  width: 54px;
+  height: 54px;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(5px);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+[data-theme="dark"] .play-circle {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.play-triangle {
+  width: 0;
+  height: 0;
+  border-top: 9px solid transparent;
+  border-bottom: 9px solid transparent;
+  border-left: 15px solid #fff;
+  filter: drop-shadow(0 2px 2px rgba(0,0,0,0.1));
+  margin-left: 4px;
+}
+
+.reactions-group { display: flex; align-items: center; gap: 10px; }
+
+.reaction-pill {
+  background: var(--bg);
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.icon-circle {
+  width: 32px;
+  height: 32px;
+  background: var(--bg);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  cursor: pointer;
+  color: var(--text);
+}
+
+.comment-count { font-size: 13px; color: var(--muted); font-weight: 500; }
+[data-theme="dark"] .card-header-banner {
+    background: #006A5A;
+    color: #BFFFF5
+}
